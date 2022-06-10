@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import EnterPanel from './components/enter-panel/EnterPanel'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className='title-todos'> todos </div>
+        <div className='enter-todos'>
+          <div className='down-pointing-angle-container-todo'>
+            <div className='down-pointing-angle-todo'>&#x2771;</div>
+          </div>
+          <input type="text" className='enter-text-todos' placeholder='What needs to be done?' />
+        </div>
+        <EnterPanel />
     </div>
   );
 }
