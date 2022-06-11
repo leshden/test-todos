@@ -1,0 +1,7 @@
+.filter-button-todos {
+  border: none;
+  background-color: white;
+  color: gray;
+  margin: 0px 10px;
+  cursor: pointer;
+}
