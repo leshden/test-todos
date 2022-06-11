@@ -1,12 +1,15 @@
 import './EnterPanel.css'
-import {useState} from 'react';
+import {useState, useContext} from 'react';
+import {TodoContext} from '../../contexts/TodoContext';
 
 const EnterPanel = () => {
   const [inputText, setInputText] = useState('');
+  const {todos, setTodos} = useContext(TodoContext);
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
       console.log(`Enter key, value ${inputText}`);
+      setTodos((todos) => [...todos, {text: inputText, active: true}]);
       setInputText('');
     }
   }

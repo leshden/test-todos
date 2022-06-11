@@ -1,12 +1,16 @@
 import './FooterPanel.css'
+import {useContext} from 'react';
 import FilterPanel from '../filter-panel/FilterPanel';
+import {TodoContext} from '../../contexts/TodoContext';
 
 const FooterPanel = () => {
+  const {todos} = useContext(TodoContext);
+
   return (
     <div className='footer-container-todos'>
       <div className='footer-todos'>
         <div className='items-left-todo'>
-          2 items left
+          {todos.length} items left
         </div>
         <div className='filter-button-container-todo'>
           <FilterPanel />
