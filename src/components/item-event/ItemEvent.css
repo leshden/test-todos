@@ -1,41 +1,39 @@
-.enter-todos {
+.item-container-todos {
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 570px;
   height: 60px;
-  box-shadow: -1px 5px 3px silver;
+  box-shadow: -1px 1px 3px silver;
 }
 
-.down-pointing-angle-container-todo {
+.item-mark-container-todo {
   width: 13%;
   height: 100%;
   text-align: center;
   background-color: white;
 }
 
-.down-pointing-angle-todo {
+.item-mark-todo {
   position: relative;
   width: 50%;
-  height: 70%;
+  height: 60%;
   background-color: white;
-  font-size: 30px;
-  transform: rotate(90deg);
-  top: 15%;
+  font-size: 22px;
+  border-radius: 25px;
+  border:solid;
+  top: 18%;
   left: 10px;
-  color: 	lightgray;
-}
-
-input::placeholder {
   color: lightgray;
 }
 
-.enter-text-todos {
+.item-text-todos {
   background-color: white;
   height: 100%;
   width: 87%;
   font-size: 25px;
-  font-style: italic;
-  border: none;
+  text-align: left;
+  display : flex;
+  align-items : center;
 }
