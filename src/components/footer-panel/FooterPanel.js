@@ -4,7 +4,11 @@ import FilterPanel from '../filter-panel/FilterPanel';
 import {TodoContext} from '../../contexts/TodoContext';
 
 const FooterPanel = () => {
-  const {todos} = useContext(TodoContext);
+  const {todos, setTodos} = useContext(TodoContext);
+
+  const handleClearCompleted = () => {
+    setTodos(todos.filter(todo => todo.active === true));
+  }
 
   return (
     <div className='footer-container-todos'>
@@ -15,7 +19,7 @@ const FooterPanel = () => {
         <div className='filter-button-container-todo'>
           <FilterPanel />
         </div>
-        <button className='clear-completed-container-todo'>
+        <button className='clear-completed-container-todo' onClick={handleClearCompleted}>
           Clear completed
         </button>
       </div>

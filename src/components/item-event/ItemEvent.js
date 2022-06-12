@@ -4,8 +4,8 @@ import {TodoContext} from '../../contexts/TodoContext';
 
 const ItemEvent = (props) => {
   const {todos, setTodos} = useContext(TodoContext);
-  const [complete, setComplete] = useState(false);
-  const {text} = props.value;
+  const {text, active} = props.value;
+  const [complete, setComplete] = useState(!active);
 
   const styleMark = complete ? 'item-mark-todo-completed' : 'item-mark-todo-active';
   const styleText = complete ? 'item-text-todos-complete' : 'item-text-todos-active';

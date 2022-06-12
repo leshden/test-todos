@@ -1,9 +1,10 @@
 import './FilterPanel.css';
-import Fragment, {useState} from 'react';
+import Fragment, {useState, useContext} from 'react';
+import {TodoContext} from '../../contexts/TodoContext';
 
 const FilterPanel = () => {
   const [filter, setFilter] = useState(['filter-button-todos filter-border-todo', 'filter-button-todos', 'filter-button-todos']);
-  const [curIndex, setCurIndex] = useState(0);
+  const {filterTab, setFilterTab} = useContext(TodoContext);
 
   const handleAllFilter = () => {
     changeFilter(0);
@@ -19,12 +20,12 @@ const FilterPanel = () => {
 
   function changeFilter(id) {
 
-    if (curIndex === id) {
+    if (filterTab === id) {
       return;
     }
 
     setFilter(filter.map((item, index) => index === id ? 'filter-button-todos filter-border-todo' : 'filter-button-todos'));
-    setCurIndex(id);
+    setFilterTab(id);
   }
 
   return(
