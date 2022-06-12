@@ -10,7 +10,7 @@ const FooterPanel = () => {
     <div className='footer-container-todos'>
       <div className='footer-todos'>
         <div className='items-left-todo'>
-          {todos.length} items left
+          {todos.filter(todo => todo.active === true).length} items left
         </div>
         <div className='filter-button-container-todo'>
           <FilterPanel />
