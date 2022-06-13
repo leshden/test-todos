@@ -15,7 +15,6 @@ const ItemsEvent = () => {
 
   return (
     filterTodos.map(todo => {
-      console.log(todo);
       return ( <ItemEvent value={todo} key={todo.text} />)
     })
   );

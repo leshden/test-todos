@@ -8,7 +8,6 @@ const EnterPanel = () => {
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
-      console.log(`Enter key, value ${inputText}`);
       setTodos((todos) => [...todos, {text: inputText, active: true}]);
       setInputText('');
     }

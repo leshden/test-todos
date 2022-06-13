@@ -19,7 +19,7 @@ const ItemEvent = (props) => {
   return (
     <div className='item-container-todos'>
       <div className='item-mark-container-todo'>
-        <div className={styleMark} onClick={handleItemClick}>
+        <div role='change-status' className={styleMark} onClick={handleItemClick}>
           {symbolOk}
         </div>
       </div>
