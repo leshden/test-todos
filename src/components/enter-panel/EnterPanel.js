@@ -8,6 +8,17 @@ const EnterPanel = () => {
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
+      if (inputText === '') {
+        alert('Empty todo!');
+        return;
+      }
+
+      const hasText = todos.filter(todo => todo.text === inputText);
+      if (hasText.length > 0) {
+        alert('Todo already exist!');
+        return;
+      }
+
       setTodos((todos) => [...todos, {text: inputText, active: true}]);
       setInputText('');
     }
